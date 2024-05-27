@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>HTML</title>
+    <link rel="stylesheet" href="css/html.css">
+<script>
+
+    
+        const contents = [
+            {
+                title: "Introduction to HTML",
+                text: "HTML stands for HyperText Markup Language. It is the standard language for creating web pages and web applications. HTML describes the structure of a web page using markup. HTML elements are the building blocks of HTML pages. These elements are represented by tags."
+            },
+            {
+                title: "HTML Elements",
+                text: "HTML elements are represented by tags. Examples of tags include <h1> for headings, <p> for paragraphs, <a> for links, and <img> for images."
+            },
+            {
+                title: "HTML Attributes",
+                text: "HTML elements can have attributes. Attributes provide additional information about elements. They are always included in the opening tag. Examples include the src attribute for images and the href attribute for links."
+            },
+            {
+                title: "HTML Document Structure",
+                text: "An HTML document starts with a <!DOCTYPE> declaration, followed by an <html> element. Inside the <html> element, there is a <head> element that contains meta-information, and a <body> element that contains the actual content of the document."
+            },
+            {
+                title: "Common HTML Tags",
+                text: "Some common HTML tags include <h1> to <h6> for headings, <p> for paragraphs, <a> for links, <ul> and <li> for lists, and <img> for images."
+            }
+        ];
+
+        let currentIndex = 0;
+
+        document.getElementById('next').addEventListener('click', function(event) {
+            event.preventDefault();
+            if (currentIndex < contents.length - 1) {
+                currentIndex++;
+                updateContent();
+            }
+        });
+
+        document.getElementById('prev').addEventListener('click', function(event) {
+            event.preventDefault();
+            if (currentIndex > 0) {
+                currentIndex--;
+                updateContent();
+            }
+        });
+
+        function updateContent() {
+            const contentDiv = document.getElementById('content');
+            contentDiv.innerHTML = `
+                <h1>${contents[currentIndex].title}</h1>
+                <p>${contents[currentIndex].text}</p>
+            `;
+        }
+
+        updateContent();
+    </script>  
+</head>
+
+<body>
+    <!-- Nav1 -->
+    <nav>
+        <img src="image/FunCode1.png">
+        <div class="Navigation"> 
+            <ul class="text">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Tutorial</a></li>           
+                <li><a href="#">Contact</a></li>
+                <a href="moon.css"><img src="image/Moon.png" class="Moon"></a>
+                <!-- Button div -->            
+                <div class="button">
+                    <a href="Login">Login</a>
+                    <a href="Signup">SignUp</a>
+                </div>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Nav2 -->
+    <div class="Second">
+        <a href="#"><img src="image/home.png" width="100px"></a>
+        <ul>
+            <li><a href="html.html">Html</a></li>
+            <li><a href="#">Css</a></li>
+            <li><a href="#">Java</a></li>
+            <li><a href="#">Python</a></li>
+            <li><a href="#">C</a></li>
+            <li><a href="#">C++</a></li>
+            <li><a href="#">React</a></li>
+            <li><a href="#">Php</a></li>
+            <li><a href="#">Nodejs</a></li>
+        </ul>
+    </div>
+    <div id="content">
+        <h1>What is HTML?</h1>
+       <br><br>
+        <h1>HTML stands for HyperText Markup Language. It is the standard language for creating web pages and web applications. HTML is used to describe the structure of a web page and its content. HTML elements are the building blocks of HTML pages, and they are represented by tags.</h1>
+    
+        <h1>Introduction to HTML</h1>
+        <h1>HTML elements are represented by tags, which are enclosed in angle brackets. Most HTML elements have an opening tag and a closing tag, with content in between. For example, a paragraph is defined by the <code>&lt;p&gt;</code> tag:</h1>
+        <pre><code>&lt;p&gt;This is a paragraph.&lt;/p&gt;</code></pre>
+    
+        <h1>Basic Structure of an HTML Document</h1>
+        <h1>An HTML document has a specific structure that includes the following elements:</h1>
+        <ul>
+            <li><code>&lt;!DOCTYPE html&gt;</code>: Defines the document type and version of HTML.</li>
+            <li><code>&lt;html&gt;</code>: The root element that contains all other HTML elements.</li>
+            <li><code>&lt;head&gt;</code>: Contains meta-information about the document, such as its title and links to stylesheets.</li>
+            <li><code>&lt;title&gt;</code>: Sets the title of the web page, which is displayed in the browser's title bar or tab.</li>
+            <li><code>&lt;body&gt;</code>: Contains the content of the web page, such as text, images, and links.</li>
+        </ul>
+    
+        <h1>Example of an HTML Document</h1>
+        <h1>Here is a simple example of a complete HTML document:</h1>
+        <pre><code>&lt;!DOCTYPE html&gt;
+    &lt;html&gt;
+    &lt;head&gt;
+        &lt;title&gt;My First HTML Page&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;h1&gt;Hello, World!&lt;/h1&gt;
+        &lt;p&gt;This is my first paragraph.&lt;/p&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;</code></pre>
+    
+        <h1>How to Use HTML</h1>
+        <h1>To create an HTML page, you can use any text editor. Save the file with a .html extension and open it in a web browser to see the rendered content. Here are the basic steps to create an HTML page:</h1>
+        <ol>
+            <li>Open a text editor (such as Notepad or VS Code).</li>
+            <li>Type the HTML code.</li>
+            <li>Save the file with a .html extension (e.g., <code>index.html</code>).</li>
+            <li>Open the HTML file in a web browser to view the page.</li>
+        </ol>
+    
+        <h1>Conclusion</h1>
+        <h1>HTML is a fundamental technology for building web pages. By understanding the basic structure and elements of HTML, you can start creating your own web pages and enhance them with other technologies like CSS and JavaScript.</h1>
+    </div>
+    
+    <div class="container">
+        <a href="#" class="Button1">PREVIOUS</a>
+        <a href="#" class="Button2">NEXT</a>
+    </div>
+    
+</body>
+</html>
